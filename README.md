@@ -1,22 +1,19 @@
 # BWT Server and Client
 ---
 
-<table style="width: 100%;">
-    <tr>
-        <td style="vertical-align: top; width: 55%;">
-            <p>This project implements a <b>Server-Client network</b> that manages the conversions from a DNA sequence to its <b>Burrows-Wheeler Transform (BWT)</b> and viceversa.<br><br> BWT is a transformation used in bioinformatics to rearrange the characters in a string so that repeated sequences are grouped together, making it easier to compress. It is used by tools such as <code>bwa</code> (Burrows-Wheeler Alignment), useful for converting a SAM file to a BAM file, aligned to its reference genome.</p>
-            <h2>Which functionalities does the project provide?</h2>
-            <ul>
-                <li><b>BW-Transformation from a DNA sequence to its BWT</b>: the client submits a DNA sequence to the server with the <code>/bwt</code> endpoint, which elaborates it and gives its BWT as answer.</li>
-                <li><b>Inverse BW-Transformation from a BWT to its DNA sequence</b>: the client submits a BWT to the server with the <code>/inverse_bwt</code> endpoint, which elaborates it and gives its original DNA sequence as answer.</li>
-            </ul>
-        </td>
-        <td style="width: 45%; text-align: center;">
-            <img src="BWTfunctioning.png" alt="BWT Functioning" width="500"/>
-            <figcaption>Suffix array method for the BWT calculation.</figcaption>
-        </td>
-    </tr>
-</table>
+This project implements a **Server-Client network** that manages the conversions from a DNA sequence to its **Burrows-Wheeler Transform (BWT)** and viceversa.
+
+BWT is a transformation used in bioinformatics to rearrange the characters in a string so that repeated sequences are grouped together, making it easier to compress.
+It is used by tools such as `bwa` (Burrows-Wheeler Alignment), useful for converting a SAM file to a BAM file, aligned to its reference genome.
+
+## Which functionalities does the project provide?
+- **BW-Transformation from a DNA sequence to its BWT**: the client submits a DNA sequence to the server with the <code>/bwt</code> endpoint, which elaborates it and gives its BWT as answer
+- **Inverse BW-Transformation from a BWT to its DNA sequence**: the client submits a BWT to the server with the <code>/inverse_bwt</code> endpoint, which elaborates it and gives its original DNA sequence as answer.
+
+<figure>
+    <img src="BWTfunctioning.png" alt="BWT Functioning" width="700"/>
+    <figcaption>Suffix array method for the BWT calculation.</figcaption>
+</figure>
 
 ## Which files are included?
 ```bash
